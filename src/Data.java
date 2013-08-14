@@ -59,12 +59,19 @@ public class Data {
 	}
 	
 	public void parse(String target) {
+		boolean yep = false;
 		for (int i = 0; i <= count; i++) {
 			String temp = array.get(i);
+			target = target.toLowerCase();
+			temp = temp.toLowerCase();
 			boolean boo = temp.contains(target);
 			if (boo) {
-				System.out.println(temp);
+				System.out.println(array.get(i));
+				yep = true;
 			}
+		}
+		if (!yep) {
+			System.out.println("Can't find, I'm sorry =(");
 		}
 	}
 	public void print() {
