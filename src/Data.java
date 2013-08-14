@@ -1,12 +1,10 @@
 import java.io.*;
-import java.util.Vector;
-
 
 public class Data {
 	private String data = "";
 	private String path;
 	private int count = 0;
-	private Vector<String> array = new Vector<String>();
+	private DArray array = new DArray();
 	Data(String p) {
 		path = p;
 	}
@@ -69,4 +67,13 @@ public class Data {
 			}
 		}
 	}
+	public void print() {
+		int capacity = array.capacity();
+		System.out.println(capacity);
+		for (int i = 0; i < capacity; i++) {
+			System.out.println(i + ": " + array.get(i));
+		}
+	}
+	
 }
+

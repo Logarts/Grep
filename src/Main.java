@@ -13,12 +13,14 @@ public class Main {
 		} catch(IOException e) {
 			System.out.println("Fuck!");
 		}
+		data.print();
 		System.out.println("Type target word here...");
 		Scanner scan = new Scanner(System.in);
 		String target = scan.next();
 		scan.close();
 		System.out.println(target);
 		data.parse(target);
+		
 	}
 
 }
