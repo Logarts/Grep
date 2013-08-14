@@ -18,7 +18,6 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		String target = scan.next();
 		scan.close();
-		System.out.println(target);
 		data.parse(target);
 		
 	}

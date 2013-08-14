@@ -51,25 +51,24 @@ public class Data {
 				break;
 			} else {
 				cut = temp.substring(0, (index));
-				System.out.println(i + ": " + cut);
 				array.add(cut);
 				temp = temp.substring(index+2);
 				i++;
 			}
 		}
 	}
+	
 	public void parse(String target) {
 		for (int i = 0; i <= count; i++) {
 			String temp = array.get(i);
-			int boo = temp.compareToIgnoreCase(target);
-			if (boo > 0) {
+			boolean boo = temp.contains(target);
+			if (boo) {
 				System.out.println(temp);
 			}
 		}
 	}
 	public void print() {
 		int capacity = array.capacity();
-		System.out.println(capacity);
 		for (int i = 0; i < capacity; i++) {
 			System.out.println(i + ": " + array.get(i));
 		}
